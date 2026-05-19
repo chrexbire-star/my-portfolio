@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>አግኙኝ | Contact Chernet</title>
+    <style>
+        /* የገጹ አጠቃላይ ስታይል */
+        body { font-family: 'Poppins', sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+        nav { background: #1e3c72; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        
+        .container { max-width: 600px; margin: 50px auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h1 { color: #1e3c72; text-align: center; margin-bottom: 20px; }
+        
+        /* የፎርሙ ዲዛይን */
+        .form-group { margin-bottom: 15px; text-align: left; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+        input, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; }
+        textarea { height: 120px; resize: none; }
+        
+        .submit-btn { 
+            width: 100%; background: #1e3c72; color: white; padding: 12px; border: none; 
+            border-radius: 8px; font-size: 18px; cursor: pointer; transition: 0.3s; margin-top: 10px;
+        }
+        .submit-btn:hover { background: #2a5298; }
+
+        .contact-details { margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; text-align: center; color: #666; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">first page</a>
+        <a href="projects.html">my works</a>
+        <a href="contact.html">contact me</a>
+    </nav>
+
+    <div class="container">
+        <h1>send a message</h1>
+        
+        <!-- የመልዕክት መላኪያ ፎርም -->
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Full name</label>
+                <input type="text" id="name" placeholder="enter your name..." required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your Email..." required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">message</label>
+                <textarea id="message" placeholder="what do you want to do?" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">submit</button>
+        </form>
+
+        <div class="contact-details">
+            <p>ኢሜይል፡ cherxbire@gmail.com</p>
+            <p>user name:@chere53</p>
+            <p>ዋቻሞ ዩኒቨርሲቲ | ሆሳዕና</p>
+        </div>
+    </div>
+
+    <script>
+        // ፎርሙ ሲላክ የሚሰራ የጃቫ ስክሪፕት
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // ገጹ እንዳይነሳ (Refresh እንዳይሆን) ይከላከላል
+            
+            const name = document.getElementById('name').value;
+            
+            // መልዕክት ማሳያ
+            alert("ሰላም " + name + "! መልዕክትዎ ተልኳል። ስለተገናኙኝ አመሰግናለሁ!");
+            
+            // ፎርሙን ባዶ ማድረግ
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>

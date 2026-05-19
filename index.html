@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chernet Birhanu | Home</title>
+    <style>
+        /* Modern Font and Reset */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #2c3e50;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Header & Profile Section */
+        header {
+            background: #34495e;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Makes it circular */
+            border: 4px solid #3498db;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        /* Button Style */
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">My Projects</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+    <header>
+        <img src="profile.jpg" alt="Chernet Birhanu" class="profile-img">
+        <h1>Chernet Birhanu</h1>
+        <p>IT Student & Graphic Designer</p>
+    </header>
+
+    <div class="container">
+        <h2 id="Welcome-text">welcome to My Official Website</h2>
+        <p>Hello! I am Chernet, a second-year IT student at Wachemo University. I specialize in creative graphic design and technology solutions actually i am just thinking to do alot of works in future and now i am intrested of taking my courses cause they are my highways to succed my goal those courses are HTML,CSS,JAVASCRIPT AND PHP.</p>
+        <a href="portfolio.html" class="btn">See My Designs</a>
+        <script src="https://unpkg.com/morpheus@0.1.1/morpheus.min.js"></script>
+
+<script>
+  window.onload = function() {
+    var element = document.getElementById('welcome-text');
+
+    // Morpheus Animation
+    morpheus(element, {
+      color: '#3498db',    // Changes text color to blue
+      opacity: 1,          // Ensures it's fully visible
+      duration: 2000,      // Animation lasts 2 seconds
+      easing: function (t) {
+        return t;          // Linear movement
+      },
+      complete: function() {
+        console.log("Animation finished!");
+      }
+    });
+  };
+</script>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Chernet Birhanu | Wachemo University</p>
+    </footer>
+
+</body>
+</html>
