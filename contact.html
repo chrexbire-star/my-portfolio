@@ -39,21 +39,20 @@
     <div class="container">
         <h1>send a message</h1>
         
-        <!-- የመልዕክት መላኪያ ፎርም -->
-        <form id="contactForm">
+        <form id="contactForm" action="https://formbold.com/s/3qex8" method="POST">
             <div class="form-group">
                 <label for="name">Full name</label>
-                <input type="text" id="name" placeholder="enter your name..." required>
+                <input type="text" id="name" name="name" placeholder="enter your name..." required>
             </div>
             
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="your Email..." required>
+                <input type="email" id="email" name="email" placeholder="your Email..." required>
             </div>
             
             <div class="form-group">
                 <label for="message">message</label>
-                <textarea id="message" placeholder="what do you want to do?" required></textarea>
+                <textarea id="message" name="message" placeholder="what do you want to do?" required></textarea>
             </div>
             
             <button type="submit" class="submit-btn">submit</button>
@@ -61,23 +60,19 @@
 
         <div class="contact-details">
             <p>ኢሜይል፡ cherxbire@gmail.com</p>
-            <p>user name:@chere53</p>
+            <p>user name: @chere53</p>
             <p>ዋቻሞ ዩኒቨርሲቲ | ሆሳዕና</p>
         </div>
     </div>
 
     <script>
-        // ፎርሙ ሲላክ የሚሰራ የጃቫ ስክሪፕት
+        // ፎርሙ ወደ FormBold ከመሄዱ በፊት ለአንተ አምፑል (Alert) እንዲያሳይ
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // ገጹ እንዳይነሳ (Refresh እንዳይሆን) ይከላከላል
-            
             const name = document.getElementById('name').value;
-            
             // መልዕክት ማሳያ
-            alert("ሰላም " + name + "! መልዕክትዎ ተልኳል። ስለተገናኙኝ አመሰግናለሁ!");
+            alert("ሰላም " + name + "! መልዕክትዎ ወደ FormBold እየተላከ ነው...");
             
-            // ፎርሙን ባዶ ማድረግ
-            this.reset();
+            // እዚህ ጋር event.preventDefault() የሚለው ጠፍቷል፤ ምክንያቱም መልዕክቱ ቀጥታ መላክ ስላለበት
         });
     </script>
 
